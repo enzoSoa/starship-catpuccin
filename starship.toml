@@ -1,0 +1,53 @@
+format = """
+[░▒▓](#b4befe)\
+$directory\
+[](fg:#b4befe bg:#7f8bf4)\
+$git_branch\
+$git_status\
+[](fg:#7f8bf4 bg:#5b5ed3)\
+$nodejs\
+$rust\
+$php\
+[](fg:#5b5ed3)\
+\n$character"""
+
+[character]
+success_symbol = '[󱚣](white) [󰁔](bold green)'
+error_symbol = '[󱚡](white) [󰁔](bold red)'
+
+[directory]
+style = "fg:#11111b bg:#b4befe"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Development" = "󰈮"
+"Downloads" = " "
+"Music" = "󰎇"
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#7f8bf4"
+format = '[[ $symbol $branch ](fg:#11111b bg:#7f8bf4)]($style)'
+
+[git_status]
+style = "bg:#89b4fa"
+format = '[[($all_status$ahead_behind )](fg:#11111b bg:#7f8bf4)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#5b5ed3"
+format = '[[ $symbol ($version) ](fg:#11111b bg:#5b5ed3)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#5b5ed3"
+format = '[[ $symbol ($version) ](fg:#11111b bg:#5b5ed3)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#5b5ed3"
+format = '[[ $symbol ($version) ](fg:#11111b bg:#5b5ed3)]($style)'
